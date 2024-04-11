@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraMovement : MonoBehaviour
+{
+    public Transform target;
+    public Vector3 offset;
+    
+
+    void Update()
+    {
+        if (target != null)
+        {
+            Vector3 targetPosition = target.position + offset;
+
+            transform.position = targetPosition;
+        }
+    }
+}
